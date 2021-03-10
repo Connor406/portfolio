@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Tuesday Night";
-  src: local("Tuesday Night"), url(./fonts/TuesdayNight-Regular.otf),
+  src: local("Tuesday Night"), url(./fonts/TuesdayNight-Regular.ttf),
     format("truetype");
 }
 
 @font-face {
   font-family: "Tradesmith";
-  src: local("Tradesmith"), url(./fonts/TradesmithRegular.otf),
+  src: local("Tradesmith"), url(./fonts/TradesmithRegular.ttf),
     format("truetype");
 }

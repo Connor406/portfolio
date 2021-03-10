@@ -26,13 +26,13 @@ const Index = () => {
         />
         <link
           rel="preload"
-          href="/public/fonts/TradesmithRegular.aeb60701.otf"
+          href="/public/fonts/TradesmithRegular.aeb60701.ttf"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/public/fonts/TuesdayNight-Regular.fdd10873.otf"
+          href="/public/fonts/TuesdayNight-Regular.fdd10873.ttf"
           as="font"
           crossOrigin=""
         />
