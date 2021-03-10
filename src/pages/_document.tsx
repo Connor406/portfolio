@@ -8,15 +8,15 @@ export default class Document extends NextDocument {
         <Head>
           <link
             rel="preload"
-            href="/public/fonts/TradesmithRegular.aeb60701.otf"
+            href="/fonts/TradesmithRegular.otf"
             as="font"
-            crossOrigin=""
+            crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/public/fonts/TuesdayNight-Regular.fdd10873.otf"
+            href="/fonts/TuesdayNight-Regular.otf"
             as="font"
-            crossOrigin=""
+            crossOrigin="anonymous"
           />
           <link href="/index.css" rel="stylesheet" />
         </Head>
