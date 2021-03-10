@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useMediaQuery } from "@chakra-ui/react";
 
 export const UseResponsiveCheck = (): {
-  isMobile: boolean[];
-  isTablet: boolean[];
-  isDesktop: boolean[];
+  isMobile: boolean;
+  isTablet: boolean;
+  isDesktop: boolean;
 } => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);

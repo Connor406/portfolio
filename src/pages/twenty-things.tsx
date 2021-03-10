@@ -2,8 +2,6 @@ import { Box, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import { MainGreen } from "../colorVars";
 import { Layout } from "../components/Layout";
-import { Navbar } from "../components/Navbar";
-import { Wrapper } from "../components/Wrapper";
 
 const TwentyThings: React.FC = ({ children }) => {
   const { colorMode } = useColorMode();
