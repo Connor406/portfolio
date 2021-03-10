@@ -24,19 +24,6 @@ const Index = () => {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-        <link
-          rel="preload"
-          href="/public/fonts/TradesmithRegular.aeb60701.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/public/fonts/TuesdayNight-Regular.fdd10873.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link href="index.css" rel="stylesheet" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Box>
