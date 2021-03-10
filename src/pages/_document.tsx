@@ -8,13 +8,13 @@ export default class Document extends NextDocument {
         <Head>
           <link
             rel="preload"
-            href="/public/fonts/TradesmithRegular.aeb60701.ttf"
+            href="/public/fonts/TradesmithRegular.aeb60701.otf"
             as="font"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/public/fonts/TuesdayNight-Regular.fdd10873.ttf"
+            href="/public/fonts/TuesdayNight-Regular.fdd10873.otf"
             as="font"
             crossOrigin=""
           />
