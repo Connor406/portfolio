@@ -16,7 +16,7 @@ const HomePage: React.FC = ({}) => {
     <Box minH={640} color={color[colorMode]} pt={20}>
       <Heading
         fontSize={!isMobile ? 194 : 90}
-        fontFamily="Tuesday Night"
+        fontFamily="Tues Night"
         ml="5%"
         mt={19}
         w={80}

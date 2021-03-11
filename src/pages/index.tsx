@@ -5,8 +5,7 @@ import About from "../components/About";
 import { ContactMe } from "../components/ContactMe";
 import HomePage from "../components/HomePage";
 import { Layout } from "../components/Layout";
-import { Projects } from "../components/Projects/Projects";
-import "./index.css";
+import Projects from "../components/Projects/Projects";
 import Head from "next/head";
 
 const Index = () => {

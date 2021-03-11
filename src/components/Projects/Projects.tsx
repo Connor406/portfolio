@@ -10,7 +10,7 @@ import {
 } from "../../colorVars";
 import { Wrapper } from "../Wrapper";
 
-export const Projects: React.FC = () => {
+const Projects: React.FC = () => {
   const { colorMode } = useColorMode();
   const bgColor = { light: BlueGreen, dark: White };
   const bgCard = { light: BlackOpac, dark: CardGreen };
@@ -195,3 +195,5 @@ export const Projects: React.FC = () => {
     </Wrapper>
   );
 };
+
+export default Projects;
