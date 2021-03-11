@@ -65,8 +65,8 @@ const Projects: React.FC = () => {
     },
     {
       name: "This website!",
-      code: "https://github.com/Connor406/Connor406.github.io",
-      link: "https://connor406.github.io",
+      code: "https://github.com/Connor406/portfolio",
+      link: "https://connorcodes.com",
       picSrc: "./website2.png",
       description:
         "The website you're currently looking at! Complete with Dark Mode, these projects, mobile responsiveness, and most importantly, my resume.",
