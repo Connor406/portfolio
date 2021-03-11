@@ -79,7 +79,7 @@ const Projects: React.FC = () => {
         pt={60}
         textAlign="center"
         fontSize={70}
-        fontFamily="Tuesday Night"
+        fontFamily="Tues Night"
         fontWeight={600}
         color={projColor[colorMode]}
       >

@@ -21,7 +21,7 @@ const About: React.FC = ({}) => {
         <Heading
           transform={isMobile ? "" : "rotate(270deg)"}
           h={100}
-          fontFamily="Tuesday Night"
+          fontFamily="Tues Night"
           fontSize={isDesktop || isMobile ? "3rem" : "2rem"}
         >
           Story Time
