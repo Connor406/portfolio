@@ -10,8 +10,8 @@ const About: React.FC = ({}) => {
   return (
     <Wrapper>
       <Box
-        pt={20}
-        minH={900}
+        py={20}
+        minH={920}
         id="about"
         display={isMobile ? "" : "flex"}
         justifyContent="center"
