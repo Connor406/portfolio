@@ -38,7 +38,7 @@ const HomePage: React.FC = ({}) => {
         meets
       </Heading>
       <Heading
-        fontSize={!isMobile ? 124 : 62}
+        fontSize={!isMobile ? 124 : 57}
         fontFamily="Tradesmith"
         maxW={700}
         ml="5%"
