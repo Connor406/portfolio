@@ -4,12 +4,13 @@ export const Navy = "#05386B";
 // GREENS //
 export const MainGreen = "#16ffbdbe";
 export const BlueGreen = "#0fa9a3ea";
-export const CardGreen = "rgba(142, 228, 175, 0.90)";
+export const CardGreen = "rgba(142, 228, 175, 0.8)";
 
 // GRAYS //
 export const BlackOpac = "#000000c9";
 export const GrayOpac = "rgba(0, 0, 0, 0.636)";
 export const White = "#EDF5E1";
+export const WhiteOpac = "rgba(237, 245, 225, 0.1)";
 
 // VIBRANT //
 export const BrightYellow = "#FAED26";

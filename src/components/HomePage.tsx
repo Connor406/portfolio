@@ -15,7 +15,7 @@ const HomePage: React.FC = ({}) => {
   return (
     <Box minH={640} color={color[colorMode]} pt={20}>
       <Heading
-        fontSize={!isMobile ? 194 : 90}
+        fontSize={!isMobile ? 194 : 160}
         fontFamily="Tues Night"
         ml="5%"
         mt={19}
@@ -28,7 +28,7 @@ const HomePage: React.FC = ({}) => {
         Fun
       </Heading>
       <Heading
-        fontSize={!isMobile ? 124 : 104}
+        fontSize={!isMobile ? 124 : 114}
         fontFamily="Tradesmith"
         maxW={550}
         ml="5%"
@@ -38,7 +38,7 @@ const HomePage: React.FC = ({}) => {
         meets
       </Heading>
       <Heading
-        fontSize={!isMobile ? 124 : 54}
+        fontSize={!isMobile ? 124 : 74}
         fontFamily="Tradesmith"
         maxW={700}
         ml="5%"

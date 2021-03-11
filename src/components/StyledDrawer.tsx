@@ -46,8 +46,8 @@ export const StyledDrawer: React.FC<DrawerProps> = ({
             // color={textColor[colorMode]}
             variant="ghost"
             pos="absolute"
-            right={2}
-            top={2}
+            right={4}
+            top={4}
             onClick={onMenuClose}
             _hover={{
               border: "none",

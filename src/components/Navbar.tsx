@@ -7,7 +7,6 @@ import { BlackOpac, MainGreen } from "../colorVars";
 import { UseResponsiveCheck } from "../hooks/useResponsiveCheck";
 import { DarkModeSwitch } from "./DarkModeSwitch";
 import { StyledDrawer } from "./StyledDrawer";
-import NextLink from "next/link";
 
 export const Navbar: React.FC = ({}) => {
   const { colorMode } = useColorMode();
@@ -70,13 +69,13 @@ export const Navbar: React.FC = ({}) => {
           <IconButton
             variant="ghost"
             boxShadow="none"
-            fontSize="1.2rem"
+            fontSize="1.8rem"
             aria-label="menu"
             icon={<HamburgerIcon />}
             color={color[colorMode]}
             pos="fixed"
-            right={2}
-            top={2}
+            right={4}
+            top={4}
             onClick={() => setMenuIsOpen(!menuIsOpen)}
             _hover={{
               border: "none",
@@ -134,7 +133,7 @@ export const Navbar: React.FC = ({}) => {
                 _hover={{
                   color: hoverColor[colorMode],
                 }}
-                href="/resume.pdf"
+                href="/Resume.pdf"
                 target="_blank"
               >
                 Resume

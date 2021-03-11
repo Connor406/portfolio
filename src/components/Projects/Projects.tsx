@@ -7,12 +7,13 @@ import {
   GrayOpac,
   MainGreen,
   White,
+  WhiteOpac,
 } from "../../colorVars";
 import { Wrapper } from "../Wrapper";
 
 const Projects: React.FC = () => {
   const { colorMode } = useColorMode();
-  const bgColor = { light: BlueGreen, dark: White };
+  const bgColor = { light: BlueGreen, dark: WhiteOpac };
   const bgCard = { light: BlackOpac, dark: CardGreen };
   const color = { light: White, dark: "black" };
   const projColor = { light: BlackOpac, dark: White };
@@ -101,11 +102,11 @@ const Projects: React.FC = () => {
                 my={6}
                 h={500}
                 w={300}
-                bgColor={bgCard[colorMode]}
-                opacity={0.8}
+                border="4px"
+                borderColor={bgCard[colorMode]}
                 shadow="dark-lg"
                 borderRadius={24}
-                color={White}
+                color={projColor[colorMode]}
               >
                 <Box w="100%" textAlign="center" pt={2} fontSize={28}>
                   {item.name}
@@ -148,12 +149,12 @@ const Projects: React.FC = () => {
                       ml={79}
                       boxShadow="dark-lg"
                       bgColor={bgColor[colorMode]}
-                      color={color[colorMode]}
+                      color={projColor[colorMode]}
                       fontFamily="'Montserrat', sans-serif"
                       fontWeight="300"
                       fontSize={22}
                       _hover={{
-                        color: bgColor[colorMode],
+                        color: color[colorMode],
                         bgColor: bgCard[colorMode],
                       }}
                     >
@@ -174,12 +175,12 @@ const Projects: React.FC = () => {
                       ml={79}
                       boxShadow="dark-lg"
                       bgColor={bgColor[colorMode]}
-                      color={color[colorMode]}
+                      color={projColor[colorMode]}
                       fontFamily="'Montserrat', sans-serif"
                       fontWeight="300"
                       fontSize={22}
                       _hover={{
-                        color: bgColor[colorMode],
+                        color: color[colorMode],
                         bgColor: bgCard[colorMode],
                       }}
                     >

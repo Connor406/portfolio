@@ -3,6 +3,7 @@ import {
   Button,
   Divider,
   Flex,
+  Link,
   Text,
   useColorMode,
 } from "@chakra-ui/react";
@@ -65,15 +66,25 @@ export const ContactMe: React.FC = () => {
           </Text>
         </Box>
       </Box>
-      <Button
-        bgColor={BrightPink}
-        color={buttonColor[colorMode]}
-        _hover={{ bgColor: BrightYellow, color: BlackOpac }}
-        boxShadow="dark-lg"
-        mb={4}
+      <Link
+        href="/Resume.pdf"
+        target="_blank"
+        _hover={{
+          border: "none",
+          textDecoration: "none",
+          boxShadow: "none",
+        }}
       >
-        Resume
-      </Button>
+        <Button
+          bgColor={BrightPink}
+          color={buttonColor[colorMode]}
+          _hover={{ bgColor: BrightYellow, color: BlackOpac }}
+          boxShadow="dark-lg"
+          mb={4}
+        >
+          Resume
+        </Button>
+      </Link>
     </Wrapper>
   );
 };

@@ -16,7 +16,7 @@ const About: React.FC = ({}) => {
         display={isMobile ? "" : "flex"}
         justifyContent="center"
         alignItems="center"
-        textAlign={isMobile ? "center" : "inherit"}
+        textAlign="inherit"
       >
         <Heading
           transform={isMobile ? "" : "rotate(270deg)"}
