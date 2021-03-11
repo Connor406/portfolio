@@ -10,7 +10,7 @@ export const UseResponsiveCheck = (): {
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
-  const mobileSize = useMediaQuery("(max-width:550px)");
+  const mobileSize = useMediaQuery("(max-width:698px)");
   const tabletSize = useMediaQuery("(max-width:800px)");
   const desktopSize = useMediaQuery("(min-width:1024px)");
 
