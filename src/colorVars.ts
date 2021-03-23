@@ -3,6 +3,7 @@ export const Navy = "#05386B";
 
 // GREENS //
 export const MainGreen = "#16ffbdbe";
+export const LightGreen = "rgba(22, 255, 189, 0.25)";
 export const BlueGreen = "#0fa9a3ea";
 export const CardGreen = "rgba(142, 228, 175, 0.8)";
 
@@ -14,7 +15,8 @@ export const WhiteOpac = "rgba(237, 245, 225, 0.1)";
 
 // VIBRANT //
 export const BrightYellow = "#FAED26";
-export const MainPink = "#D53F8C";
+export const MainPink = "rgb(213, 63, 140)";
+export const PinkOpac = "rgba(255, 255, 255, .5)";
 export const BrightPink = "#F070A1";
 
 // NOT IN USE => KEEP

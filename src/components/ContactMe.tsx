@@ -41,7 +41,7 @@ export const ContactMe: React.FC = () => {
           my={3}
         >
           <IoLocationSharp />
-          <Text ml={2}>San Francisco, CA</Text>
+          <Text ml={2}>Chicago, IL</Text>
         </Box>
         <Box
           display="flex"

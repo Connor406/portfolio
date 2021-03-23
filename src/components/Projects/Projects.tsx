@@ -5,7 +5,9 @@ import {
   BlueGreen,
   CardGreen,
   GrayOpac,
+  LightGreen,
   MainGreen,
+  PinkOpac,
   White,
   WhiteOpac,
 } from "../../colorVars";
@@ -13,10 +15,12 @@ import { Wrapper } from "../Wrapper";
 
 const Projects: React.FC = () => {
   const { colorMode } = useColorMode();
-  const bgColor = { light: BlueGreen, dark: WhiteOpac };
+  const bgColor = { light: LightGreen, dark: WhiteOpac };
   const bgCard = { light: BlackOpac, dark: CardGreen };
   const color = { light: White, dark: "black" };
   const projColor = { light: BlackOpac, dark: White };
+  const test = { light: LightGreen, dark: "none" };
+  const borderFlicker = { light: "0px", dark: "4px" };
 
   let projects = [
     {
@@ -75,7 +79,10 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <Wrapper bgTone={{ light: MainGreen, dark: "gray.900" }}>
+    <Wrapper
+      bgTone={{ light: PinkOpac, dark: "gray.900" }}
+      bgPic="url('/bgplant.jpg')"
+    >
       <Box
         pt={60}
         textAlign="center"
@@ -102,10 +109,11 @@ const Projects: React.FC = () => {
                 my={6}
                 h={500}
                 w={300}
-                border="4px"
+                border={borderFlicker[colorMode]}
                 borderColor={bgCard[colorMode]}
                 shadow="dark-lg"
                 borderRadius={24}
+                bgColor={test[colorMode]}
                 color={projColor[colorMode]}
               >
                 <Box w="100%" textAlign="center" pt={2} fontSize={28}>
@@ -126,7 +134,7 @@ const Projects: React.FC = () => {
                     opacity={0}
                     _hover={{
                       opacity: 1,
-                      bgColor: GrayOpac,
+                      bgColor: BlackOpac,
                     }}
                     transitionDuration=".5s"
                     textAlign="center"
