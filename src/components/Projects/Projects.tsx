@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
       tools: "NextJS, React, GraphQL, Redis, PostgreSQL, Apollo, Chakra UI",
     },
     {
-      name: "Dart Score Keeper",
+      name: "Dart Scoreboard",
       code: "https://github.com/Connor406/Dart-score-keeper",
       link: "",
       picSrc: "/dart.png",
@@ -80,7 +80,7 @@ const Projects: React.FC = () => {
 
   return (
     <Wrapper
-      bgTone={{ light: PinkOpac, dark: "gray.900" }}
+      bgTone={{ light: PinkOpac, dark: BlackOpac }}
       bgPic="url('/bgplant.jpg')"
     >
       <Box
@@ -112,11 +112,12 @@ const Projects: React.FC = () => {
                 border={borderFlicker[colorMode]}
                 borderColor={bgCard[colorMode]}
                 shadow="dark-lg"
+                css={{ backdropFilter: "blur(3px)" }}
                 borderRadius={24}
                 bgColor={test[colorMode]}
                 color={projColor[colorMode]}
               >
-                <Box w="100%" textAlign="center" pt={2} fontSize={28}>
+                <Box w="100%" textAlign="center" pt={2} fontSize={32}>
                   {item.name}
                 </Box>
                 <Box

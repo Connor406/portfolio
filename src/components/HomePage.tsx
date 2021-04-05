@@ -9,9 +9,6 @@ const HomePage: React.FC = ({}) => {
   const { colorMode } = useColorMode();
   const color = { light: "black", dark: MainGreen };
 
-  console.log("mobile:", isMobile);
-  console.log("tablet:", isTablet);
-
   return (
     <Box minH={640} color={color[colorMode]} pt={20}>
       <Heading

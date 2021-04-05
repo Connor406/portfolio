@@ -1,5 +1,6 @@
 import { Box, useColorMode } from "@chakra-ui/react";
 import React from "react";
+import { DeepBlack } from "../colorVars";
 
 export type WrapperVariant = "small" | "regular";
 
@@ -16,7 +17,7 @@ export const Wrapper: React.FC<WrapperProps> = ({
   bgPic,
 }) => {
   const { colorMode } = useColorMode();
-  const bgColor = { light: "white", dark: "gray.900" };
+  const bgColor = { light: "white", dark: DeepBlack };
   const color = { light: "black", dark: "white" };
 
   return (

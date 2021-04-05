@@ -9,6 +9,7 @@ export const CardGreen = "rgba(142, 228, 175, 0.8)";
 
 // GRAYS //
 export const BlackOpac = "#000000c9";
+export const DeepBlack = "rgba(0, 0, 0, 0.98)";
 export const GrayOpac = "rgba(0, 0, 0, 0.636)";
 export const White = "#EDF5E1";
 export const WhiteOpac = "rgba(237, 245, 225, 0.1)";

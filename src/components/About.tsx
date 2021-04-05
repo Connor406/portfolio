@@ -3,12 +3,13 @@ import { Flex, useColorMode, Text, Heading, Box } from "@chakra-ui/react";
 import { Layout } from "./Layout";
 import { Wrapper } from "./Wrapper";
 import { UseResponsiveCheck } from "../hooks/useResponsiveCheck";
+import { BlackOpac, DeepBlack } from "../colorVars";
 
 const About: React.FC = ({}) => {
   const { isMobile, isTablet, isDesktop } = UseResponsiveCheck();
 
   return (
-    <Wrapper>
+    <Wrapper bgTone={{ light: "inherit", dark: DeepBlack }}>
       <Box
         py={20}
         minH={920}
