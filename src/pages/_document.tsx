@@ -21,18 +21,18 @@ export default class Document extends NextDocument {
           />
           <link href="index.css" rel="stylesheet" />
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-8PRJVJ30R8"
-          />
+
           <script
             dangerouslySetInnerHTML={{
               __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+                <script async src="https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}"></script>
+                <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
 
-            gtag('config', ${process.env.GOOGLE_ANALYTICS});`,
+                  gtag('config', ${process.env.GOOGLE_ANALYTICS});
+                </script>`,
             }}
           />
         </Head>
