@@ -23,7 +23,6 @@ export const ContactMe: React.FC = () => {
 
   return (
     <Wrapper>
-      <Divider />
       <Text
         pt={20}
         mr={4}

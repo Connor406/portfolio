@@ -1,8 +1,7 @@
-import { Box, extendTheme, Heading, useColorMode } from "@chakra-ui/react";
+import { Box, Heading, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import { BrightPink, MainGreen } from "../colorVars";
 import { UseResponsiveCheck } from "../hooks/useResponsiveCheck";
-import { Layout } from "./Layout";
 
 const HomePage: React.FC = ({}) => {
   const { isMobile, isTablet, isDesktop } = UseResponsiveCheck();
