@@ -32,6 +32,15 @@ const Projects: React.FC = () => {
         "A tool for musicians to create setlists, store song lyrics, and display scrolling lyrics for real-time performances",
     },
     {
+      name: "Pint Hunter",
+      code: "https://github.com/Connor406/Pint-Hunter",
+      link: "https://pint-hunter.vercel.app/",
+      tools: "NextJS, React, TypeScript, Rest API, Chakra UI",
+      picSrc: "./pint.png",
+      description:
+        "Pint Hunter is a tool that lets users search for breweries by name, city, state, or zipcode",
+    },
+    {
       name: "Reddit-ish",
       code: "https://github.com/Connor406/Reddit-clone-backend",
       picSrc: "./redditish.png",
@@ -39,16 +48,17 @@ const Projects: React.FC = () => {
         "A fullstack Reddit clone with custom authentication, allowing users to create, read, update, and delete posts as well as vote on other users' posts",
       tools: "NextJS, React, GraphQL, Redis, PostgreSQL, Apollo, Chakra UI",
     },
-    {
-      name: "Dart Scoreboard",
-      code: "https://github.com/Connor406/Dart-score-keeper",
-      link: "",
-      picSrc: "/dart.png",
-      tools:
-        "Typescript, React Native, Styled Components, coming soon: GraphQL, PostgreSQL, Apollo ",
-      description:
-        "This React Native app allows users to create a game of 1 to 4 players with several different game variations and keeps track of the score. Working to add sign in and remote game play options for socially distanced dart gaming",
-    },
+
+    // {
+    //   name: "Dart Scoreboard",
+    //   code: "https://github.com/Connor406/Dart-score-keeper",
+    //   link: "",
+    //   picSrc: "/dart.png",
+    //   tools:
+    //     "Typescript, React Native, Styled Components, coming soon: GraphQL, PostgreSQL, Apollo ",
+    //   description:
+    //     "This React Native app allows users to create a game of 1 to 4 players with several different game variations and keeps track of the score. Working to add sign in and remote game play options for socially distanced dart gaming",
+    // },
     {
       name: "Nelp",
       code: "https://github.com/Connor406/nelp/tree/master",
