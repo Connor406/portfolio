@@ -73,7 +73,7 @@ export const StyledDrawer: React.FC<DrawerProps> = ({
           >
             {menuItems.map((link, key) => {
               return (
-                <NextLink href={link.id}>
+                <NextLink href={link.id} scroll={false}>
                   <Link
                     key={key}
                     _hover={{
