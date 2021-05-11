@@ -94,6 +94,7 @@ const Projects: React.FC = () => {
       bgPic="url('/bgplant.jpg')"
     >
       <Box
+        id="projects"
         pt={60}
         textAlign="center"
         fontSize={70}

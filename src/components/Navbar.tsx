@@ -28,18 +28,22 @@ export const Navbar: React.FC = ({}) => {
     {
       text: isMobile ? "Home" : "<ConnorCodes />",
       yValue: 0,
+      id: "#home",
     },
     {
       text: "About",
       yValue: isMobile ? 656 : 778,
+      id: "#about",
     },
     {
       text: "Projects",
       yValue: isMobile ? 2031 : 1667,
+      id: "#projects",
     },
     {
       text: "Hire Me!",
       yValue: 6000,
+      id: "#contact",
     },
   ];
 
@@ -62,7 +66,7 @@ export const Navbar: React.FC = ({}) => {
   ];
 
   return (
-    <>
+    <div id="home">
       {/* isMobile but menu not open */}
       {isMobile ? (
         <>
@@ -138,15 +142,7 @@ export const Navbar: React.FC = ({}) => {
               >
                 Resume
               </Link>
-              {/* <NextLink href="/twenty-things">
-                <Link
-                  _hover={{
-                    color: hoverColor[colorMode],
-                  }}
-                >
-                  20 Things
-                </Link>
-              </NextLink> */}
+
               <Box>
                 {buttonIcons.map((icon) => {
                   return (
@@ -171,6 +167,6 @@ export const Navbar: React.FC = ({}) => {
           </Flex>
         </>
       )}
-    </>
+    </div>
   );
 };

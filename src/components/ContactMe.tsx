@@ -24,6 +24,7 @@ export const ContactMe: React.FC = () => {
   return (
     <Wrapper>
       <Text
+        id="contact"
         pt={20}
         mr={4}
         fontFamily="Tradesmith"

@@ -18,6 +18,7 @@ interface DrawerProps {
   menuItems: {
     text: string;
     yValue: number;
+    id: string;
   }[];
   scrollFunction: (value: number) => void;
   color: string;
@@ -76,7 +77,7 @@ export const StyledDrawer: React.FC<DrawerProps> = ({
                   _hover={{
                     color: { color },
                   }}
-                  onClick={() => scrollFunction(link.yValue)}
+                  href={link.id}
                 >
                   {link.text}
                 </Link>
