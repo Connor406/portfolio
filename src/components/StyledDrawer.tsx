@@ -11,6 +11,7 @@ import {
 import React from "react";
 import { BlackOpac, CardGreen, GrayOpac, MainGreen, White } from "../colorVars";
 import { DarkModeSwitch } from "./DarkModeSwitch";
+import NextLink from "next/link";
 
 interface DrawerProps {
   onClose: any;
@@ -72,15 +73,16 @@ export const StyledDrawer: React.FC<DrawerProps> = ({
           >
             {menuItems.map((link, key) => {
               return (
-                <Link
-                  key={key}
-                  _hover={{
-                    color: { color },
-                  }}
-                  href={link.id}
-                >
-                  {link.text}
-                </Link>
+                <NextLink href={link.id}>
+                  <Link
+                    key={key}
+                    _hover={{
+                      color: { color },
+                    }}
+                  >
+                    {link.text}
+                  </Link>
+                </NextLink>
               );
             })}
             <DarkModeSwitch />
