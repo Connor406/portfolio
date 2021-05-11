@@ -73,16 +73,17 @@ export const StyledDrawer: React.FC<DrawerProps> = ({
           >
             {menuItems.map((link, key) => {
               return (
-                <NextLink href={link.id} scroll={false}>
-                  <Link
-                    key={key}
-                    _hover={{
-                      color: { color },
-                    }}
-                  >
-                    {link.text}
-                  </Link>
-                </NextLink>
+                // <NextLink href={link.id} scroll={false}>
+                <Link
+                  key={key}
+                  href={link.id}
+                  _hover={{
+                    color: { color },
+                  }}
+                >
+                  {link.text}
+                </Link>
+                // </NextLink>
               );
             })}
             <DarkModeSwitch />
