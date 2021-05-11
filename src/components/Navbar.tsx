@@ -28,22 +28,22 @@ export const Navbar: React.FC = ({}) => {
     {
       text: isMobile ? "Home" : "<ConnorCodes />",
       yValue: 0,
-      id: "https://connorcodes.com/#home",
+      id: "/#home",
     },
     {
       text: "About",
       yValue: isMobile ? 656 : 778,
-      id: "https://connorcodes.com/#about",
+      id: "/#about",
     },
     {
       text: "Projects",
       yValue: isMobile ? 2031 : 1667,
-      id: "https://connorcodes.com/#projects",
+      id: "/#projects",
     },
     {
       text: "Hire Me!",
       yValue: 6000,
-      id: "https://connorcodes.com/#contact",
+      id: "/#contact",
     },
   ];
 
