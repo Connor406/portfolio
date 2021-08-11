@@ -12,12 +12,15 @@
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@n8tb1t/use-scroll-position": "^2.0.3",
+    "@react-spring/three": "^9.2.4",
     "dotenv": "^9.0.0",
     "framer-motion": "^2.9.4",
     "next": "latest",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-three-fiber": "^6.0.13",
+    "three": "^0.131.3"
   },
   "license": "MIT",
   "devDependencies": {
