@@ -40,6 +40,15 @@ const Projects: React.FC = () => {
         "A tool for musicians to create setlists, store song lyrics, and display scrolling lyrics for real-time performances",
     },
     {
+      name: "Pokedex",
+      link: "https://pokemon-pokedex-two.vercel.app/",
+      code: "https://github.com/Connor406/pokemon-pokedex",
+      picSrc: "/pokemon.png",
+      tools: "Nextjs, React, TypeScript, PokeAPI",
+      description:
+        "This app uses the PokeAPI to query Pokemon data, allowing users to search for their favorite Pokemon",
+    },
+    {
       name: "Pint Hunter",
       code: "https://github.com/Connor406/Pint-Hunter",
       link: "https://pint-hunter.vercel.app/",
