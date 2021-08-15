@@ -1,5 +1,5 @@
-import { Box, Button, Flex, Link, useColorMode } from "@chakra-ui/react";
-import React from "react";
+import { Box, Button, Flex, Link, useColorMode } from "@chakra-ui/react"
+import React from "react"
 import {
   BlackOpac,
   BlueGreen,
@@ -10,24 +10,32 @@ import {
   PinkOpac,
   White,
   WhiteOpac,
-} from "../../colorVars";
-import { Wrapper } from "../Wrapper";
+} from "../../colorVars"
+import { Wrapper } from "../Wrapper"
 
 const Projects: React.FC = () => {
-  const { colorMode } = useColorMode();
-  const bgColor = { light: LightGreen, dark: WhiteOpac };
-  const bgCard = { light: BlackOpac, dark: CardGreen };
-  const color = { light: White, dark: "black" };
-  const projColor = { light: BlackOpac, dark: White };
-  const test = { light: LightGreen, dark: "none" };
-  const borderFlicker = { light: "0px", dark: "4px" };
+  const { colorMode } = useColorMode()
+  const bgColor = { light: LightGreen, dark: WhiteOpac }
+  const bgCard = { light: BlackOpac, dark: CardGreen }
+  const color = { light: White, dark: "black" }
+  const projColor = { light: BlackOpac, dark: White }
+  const test = { light: LightGreen, dark: "none" }
+  const borderFlicker = { light: "0px", dark: "4px" }
 
   let projects = [
+    {
+      name: "Agrograph",
+      link: "https://agrograph.com/",
+      picSrc: "/agrograph.png",
+      tools: "TypeScript, Node, React, Fastify, PostgreSQL",
+      description:
+        "Agrograph uses satellite imagery and machine learning to predict crop yields and provide risk analysis for agricultural lenders",
+    },
     {
       name: "Lyric Keeper",
       link: "https://www.lyrickeeper.com/",
       picSrc: "/lklogo.jpg",
-      tools: "Typescript, React, GraphQL, PostgreSQL, Apollo, Firebase",
+      tools: "TypeScript, React, GraphQL, PostgreSQL, Apollo, Firebase",
       description:
         "A tool for musicians to create setlists, store song lyrics, and display scrolling lyrics for real-time performances",
     },
@@ -60,24 +68,6 @@ const Projects: React.FC = () => {
     //     "This React Native app allows users to create a game of 1 to 4 players with several different game variations and keeps track of the score. Working to add sign in and remote game play options for socially distanced dart gaming",
     // },
     {
-      name: "Nelp",
-      code: "https://github.com/Connor406/nelp/tree/master",
-      link: "https://connor406.github.io/nelp/",
-      picSrc: "/nelp.jpg",
-      tools: "Javascript, React, Yelp's API, HTML, CSS",
-      description:
-        "Using the Yelp API, this app lets users search for restaurants in their local area",
-    },
-    {
-      name: "Playlistr",
-      code: "https://github.com/Connor406/playlistr/tree/master",
-      link: "https://connor406.github.io/playlistr/",
-      picSrc: "./playlistr.jpg",
-      tools: "Javascript, React, Spotify's API, HTML, CSS",
-      description:
-        "Using the Spotify API, this app lets users create playlists, update existing playlists and save changes directly to their Spotify account",
-    },
-    {
       name: "This website!",
       code: "https://github.com/Connor406/portfolio",
       link: "https://connorcodes.com",
@@ -86,13 +76,10 @@ const Projects: React.FC = () => {
         "The website you're currently looking at! Complete with Dark Mode, these projects, mobile responsiveness, and most importantly, my resume.",
       tools: "NextJS, React, TypeScript, Chakra UI",
     },
-  ];
+  ]
 
   return (
-    <Wrapper
-      bgTone={{ light: PinkOpac, dark: BlackOpac }}
-      bgPic="url('/bgplant.jpg')"
-    >
+    <Wrapper bgTone={{ light: PinkOpac, dark: BlackOpac }} bgPic="url('/bgplant.jpg')">
       <Box
         id="projects"
         pt={60}
@@ -112,7 +99,7 @@ const Projects: React.FC = () => {
         flexWrap="wrap"
         pb={40}
       >
-        {projects.map((item) => {
+        {projects.map(item => {
           return (
             <Box>
               <Box
@@ -157,11 +144,7 @@ const Projects: React.FC = () => {
                   </Box>
                 </Box>
                 {item.link ? (
-                  <Link
-                    href={item.link}
-                    target="_blank"
-                    _hover={{ textDecor: "none" }}
-                  >
+                  <Link href={item.link} target="_blank" _hover={{ textDecor: "none" }}>
                     <Button
                       textAlign="center"
                       w={140}
@@ -183,11 +166,7 @@ const Projects: React.FC = () => {
                   </Link>
                 ) : null}
                 {item.code ? (
-                  <Link
-                    href={item.code}
-                    target="_blank"
-                    _hover={{ textDecor: "none" }}
-                  >
+                  <Link href={item.code} target="_blank" _hover={{ textDecor: "none" }}>
                     <Button
                       textAlign="center"
                       w={140}
@@ -210,11 +189,11 @@ const Projects: React.FC = () => {
                 ) : null}
               </Box>
             </Box>
-          );
+          )
         })}
       </Flex>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects
