@@ -1,18 +1,20 @@
-import { Box, useColorMode } from "@chakra-ui/react";
-import React from "react";
-import { MainGreen } from "../colorVars";
-import About from "../components/About";
-import { ContactMe } from "../components/ContactMe";
-import HomePage from "../components/HomePage";
-import { Layout } from "../components/Layout";
-import Projects from "../components/Projects/Projects";
-import Head from "next/head";
+import { Box, useColorMode } from "@chakra-ui/react"
+import React, { useState } from "react"
+import { MainGreen } from "../colorVars"
+import About from "../components/About"
+import { ContactMe } from "../components/ContactMe"
+import HomePage from "../components/HomePage"
+import { Layout } from "../components/Layout"
+import Projects from "../components/Projects/Projects"
+import Head from "next/head"
+import { useEffect } from "react"
+import Loader from "../components/Loader"
 
 const Index = () => {
-  const { colorMode } = useColorMode();
-  const bgColor = { light: MainGreen, dark: "gray.900" };
-  const color = { light: "black", dark: MainGreen };
-  const faviconColor = { light: "/favicon.png", dark: "/favicon-dark.png" };
+  const { colorMode } = useColorMode()
+  const bgColor = { light: MainGreen, dark: "gray.900" }
+  const color = { light: "black", dark: MainGreen }
+  const faviconColor = { light: "/favicon.png", dark: "/favicon-dark.png" }
 
   return (
     <>
@@ -36,7 +38,7 @@ const Index = () => {
         </Layout>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

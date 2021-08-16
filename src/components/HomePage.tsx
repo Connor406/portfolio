@@ -3,11 +3,12 @@ import { isValidMotionProp, motion } from "framer-motion"
 import React from "react"
 import { BrightPink, MainGreen, MainPink } from "../colorVars"
 import { UseResponsiveCheck } from "../hooks/useResponsiveCheck"
+import { MotionBox, MotionHeading } from "./Motion/Motion"
 
 const HomePage: React.FC = ({}) => {
   const { isMobile, isTablet, isDesktop } = UseResponsiveCheck()
   const { colorMode } = useColorMode()
-  const color = { light: "black", dark: MainGreen }
+  const color = { light: "rgba(22, 22, 29, 1)", dark: MainGreen }
 
   const secondVariant = {
     animate: { y: 0 },
@@ -21,7 +22,7 @@ const HomePage: React.FC = ({}) => {
         initial={{ x: 1000 }}
         transition={{
           duration: 1.2,
-          delay: 0.3,
+          delay: isMobile ? 0.3 : 1.3,
           type: "spring",
         }}
       >
@@ -32,10 +33,10 @@ const HomePage: React.FC = ({}) => {
           ml="5%"
           w={80}
           initial={{ color: MainPink }}
-          animate={{ color: "rgba(22, 22, 29, 1)" }}
+          animate={{ color: color[colorMode] }}
           transition={{
             duration: 1,
-            delay: 0.5,
+            delay: isMobile ? 0.5 : 1.5,
           }}
         >
           Fun
@@ -47,6 +48,7 @@ const HomePage: React.FC = ({}) => {
         initial="initial"
         transition={{
           duration: 1,
+          delay: 1,
           type: "spring",
         }}
       >
@@ -65,7 +67,7 @@ const HomePage: React.FC = ({}) => {
         initial={{ x: 1000, y: 1000 }}
         transition={{
           duration: 1,
-          delay: 0.5,
+          delay: isMobile ? 0.5 : 1.5,
           type: "spring",
         }}
       >
@@ -85,21 +87,3 @@ const HomePage: React.FC = ({}) => {
 }
 
 export default HomePage
-
-const MotionHeading = motion(
-  forwardRef((props, ref) => {
-    const chakraProps = Object.fromEntries(
-      Object.entries(props).filter(([key]) => !isValidMotionProp(key))
-    )
-    return <Heading ref={ref} {...chakraProps} />
-  })
-)
-
-const MotionBox = motion(
-  forwardRef((props, ref) => {
-    const chakraProps = Object.fromEntries(
-      Object.entries(props).filter(([key]) => !isValidMotionProp(key))
-    )
-    return <Box ref={ref} {...chakraProps} />
-  })
-)

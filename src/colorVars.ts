@@ -2,7 +2,8 @@
 export const Navy = "#05386B"
 
 // GREENS //
-export const MainGreen = "#16ffbdbe"
+export const MainGreen = "rgba(22, 255, 189, 0.75)"
+export const SolidGreen = "rgba(22, 255, 189, 1)"
 export const LightGreen = "rgba(22, 255, 189, 0.25)"
 export const BlueGreen = "#0fa9a3ea"
 export const CardGreen = "rgba(142, 228, 175, 0.8)"
