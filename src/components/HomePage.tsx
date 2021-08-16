@@ -86,7 +86,7 @@ const HomePage: React.FC = ({}) => {
 
 export default HomePage
 
-const MotionHeading = motion.custom(
+const MotionHeading = motion(
   forwardRef((props, ref) => {
     const chakraProps = Object.fromEntries(
       Object.entries(props).filter(([key]) => !isValidMotionProp(key))
@@ -95,7 +95,7 @@ const MotionHeading = motion.custom(
   })
 )
 
-const MotionBox = motion.custom(
+const MotionBox = motion(
   forwardRef((props, ref) => {
     const chakraProps = Object.fromEntries(
       Object.entries(props).filter(([key]) => !isValidMotionProp(key))
