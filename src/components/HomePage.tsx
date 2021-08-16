@@ -1,51 +1,105 @@
-import { Box, Heading, useColorMode } from "@chakra-ui/react";
-import React from "react";
-import { BrightPink, MainGreen } from "../colorVars";
-import { UseResponsiveCheck } from "../hooks/useResponsiveCheck";
+import { Box, ColorModeProvider, forwardRef, Heading, useColorMode } from "@chakra-ui/react"
+import { isValidMotionProp, motion } from "framer-motion"
+import React from "react"
+import { BrightPink, MainGreen, MainPink } from "../colorVars"
+import { UseResponsiveCheck } from "../hooks/useResponsiveCheck"
 
 const HomePage: React.FC = ({}) => {
-  const { isMobile, isTablet, isDesktop } = UseResponsiveCheck();
-  const { colorMode } = useColorMode();
-  const color = { light: "black", dark: MainGreen };
+  const { isMobile, isTablet, isDesktop } = UseResponsiveCheck()
+  const { colorMode } = useColorMode()
+  const color = { light: "black", dark: MainGreen }
+
+  const secondVariant = {
+    animate: { y: 0 },
+    initial: { y: 1000 },
+  }
 
   return (
-    <Box minH={640} color={color[colorMode]} pt={20}>
-      <Heading
-        fontSize={!isMobile ? 194 : 160}
-        fontFamily="Tues Night"
-        ml="5%"
-        mt={19}
-        w={80}
-        transitionDuration=".5s"
-        _hover={{
-          color: BrightPink,
+    <MotionBox minH={640} color={color[colorMode]} pt={20}>
+      <MotionBox
+        animate={{ x: 0 }}
+        initial={{ x: 1000 }}
+        transition={{
+          duration: 1.2,
+          delay: 0.3,
+          type: "spring",
         }}
       >
-        Fun
-      </Heading>
-      <Heading
-        fontSize={!isMobile ? 124 : 114}
-        fontFamily="Tradesmith"
-        maxW={550}
-        ml="5%"
-        transform="skewX(-9deg)"
-        transitionDuration=".5s"
+        <MotionHeading
+          mt={19}
+          fontSize={!isMobile ? 194 : 160}
+          fontFamily="Tues Night"
+          ml="5%"
+          w={80}
+          initial={{ color: MainPink }}
+          animate={{ color: "rgba(22, 22, 29, 1)" }}
+          transition={{
+            duration: 1,
+            delay: 0.5,
+          }}
+        >
+          Fun
+        </MotionHeading>
+      </MotionBox>
+      <MotionBox
+        variants={secondVariant}
+        animate="animate"
+        initial="initial"
+        transition={{
+          duration: 1,
+          type: "spring",
+        }}
       >
-        meets
-      </Heading>
-      <Heading
-        fontSize={!isMobile ? 124 : 57}
-        fontFamily="Tradesmith"
-        maxW={700}
-        ml="5%"
-        transform="skewX(9deg)"
-        transitionDuration=".5s"
-        lineHeight={0.4}
+        <Heading
+          fontSize={!isMobile ? 124 : 114}
+          fontFamily="Tradesmith"
+          maxW={550}
+          ml="5%"
+          transform="skewX(-9deg)"
+        >
+          meets
+        </Heading>
+      </MotionBox>
+      <MotionBox
+        animate={{ x: 0, y: 0 }}
+        initial={{ x: 1000, y: 1000 }}
+        transition={{
+          duration: 1,
+          delay: 0.5,
+          type: "spring",
+        }}
       >
-        functional
-      </Heading>
-    </Box>
-  );
-};
+        <MotionHeading
+          fontSize={!isMobile ? 124 : 57}
+          fontFamily="Tradesmith"
+          maxW={700}
+          ml="5%"
+          transform="skewX(9deg)"
+          lineHeight={0.4}
+        >
+          functional
+        </MotionHeading>
+      </MotionBox>
+    </MotionBox>
+  )
+}
 
-export default HomePage;
+export default HomePage
+
+const MotionHeading = motion.custom(
+  forwardRef((props, ref) => {
+    const chakraProps = Object.fromEntries(
+      Object.entries(props).filter(([key]) => !isValidMotionProp(key))
+    )
+    return <Heading ref={ref} {...chakraProps} />
+  })
+)
+
+const MotionBox = motion.custom(
+  forwardRef((props, ref) => {
+    const chakraProps = Object.fromEntries(
+      Object.entries(props).filter(([key]) => !isValidMotionProp(key))
+    )
+    return <Box ref={ref} {...chakraProps} />
+  })
+)
