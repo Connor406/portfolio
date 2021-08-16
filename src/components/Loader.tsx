@@ -106,7 +106,7 @@ const Loader: React.FC<LoaderProps> = ({ isMobile }) => {
         h="150px"
         align="center"
         color={BlackOpac}
-        fontSize="3rem"
+        fontSize="2.2rem"
         fontFamily="Tradesmith"
       >{`< ConnorCodes />`}</MotionText>
     </MotionBox>
