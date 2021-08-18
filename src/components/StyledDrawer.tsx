@@ -1,4 +1,4 @@
-import { CloseIcon } from "@chakra-ui/icons";
+import { CloseIcon } from "@chakra-ui/icons"
 import {
   Drawer,
   DrawerContent,
@@ -7,23 +7,23 @@ import {
   IconButton,
   Link,
   useColorMode,
-} from "@chakra-ui/react";
-import React from "react";
-import { BlackOpac, CardGreen, GrayOpac, MainGreen, White } from "../colorVars";
-import { DarkModeSwitch } from "./DarkModeSwitch";
-import NextLink from "next/link";
+} from "@chakra-ui/react"
+import React from "react"
+import { BlackOpac, CardGreen, GrayOpac, MainGreen, White } from "../colorVars"
+import { DarkModeSwitch } from "./DarkModeSwitch"
+import NextLink from "next/link"
 
 interface DrawerProps {
-  onClose: any;
-  isOpen: any;
+  onClose: any
+  isOpen: any
   menuItems: {
-    text: string;
-    yValue: number;
-    id: string;
-  }[];
-  scrollFunction: (value: number) => void;
-  color: string;
-  onMenuClose: any;
+    text: string
+    yValue: number
+    id: string
+  }[]
+  scrollFunction: (value: number) => void
+  color: string
+  onMenuClose: any
 }
 
 export const StyledDrawer: React.FC<DrawerProps> = ({
@@ -34,9 +34,9 @@ export const StyledDrawer: React.FC<DrawerProps> = ({
   onMenuClose,
   scrollFunction,
 }) => {
-  const { colorMode } = useColorMode();
-  const bgColor = { light: White, dark: "gray.900" };
-  const textColor = { light: BlackOpac, dark: White };
+  const { colorMode } = useColorMode()
+  const bgColor = { light: White, dark: "gray.900" }
+  const textColor = { light: BlackOpac, dark: White }
 
   return (
     <Drawer placement="right" onClose={onClose} isOpen={isOpen} size="xs">
@@ -77,6 +77,7 @@ export const StyledDrawer: React.FC<DrawerProps> = ({
                 <Link
                   key={key}
                   href={link.id}
+                  pointerEvents="none"
                   _hover={{
                     color: { color },
                   }}
@@ -84,12 +85,12 @@ export const StyledDrawer: React.FC<DrawerProps> = ({
                   {link.text}
                 </Link>
                 // </NextLink>
-              );
+              )
             })}
             <DarkModeSwitch />
           </Flex>
         </DrawerContent>
       </DrawerOverlay>
     </Drawer>
-  );
-};
+  )
+}

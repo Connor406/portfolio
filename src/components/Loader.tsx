@@ -34,12 +34,13 @@ const Loader: React.FC<LoaderProps> = ({ isMobile }) => {
     >
       <MotionBox layoutId="header" mt="calc(50vh - 75px)" w="100%" h="150px" align="center">
         <MotionText
-          color={White}
+          color={BlackOpac}
           layoutId="logo"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 1 }}
           fontSize="3rem"
+          fontFamily="Tradesmith"
           layout
         >{`< ConnorCodes />`}</MotionText>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
