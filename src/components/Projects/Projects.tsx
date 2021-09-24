@@ -11,6 +11,7 @@ import {
   White,
   WhiteOpac,
 } from "../../colorVars"
+import { MotionBox } from "../Motion/Motion"
 import { Wrapper } from "../Wrapper"
 
 const Projects: React.FC = () => {
@@ -111,7 +112,10 @@ const Projects: React.FC = () => {
         {projects.map(item => {
           return (
             <Box>
-              <Box
+              <MotionBox
+                transition={{ duration: 0.8, delay: 2 }}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: [0, 1.1, 1] }}
                 mx={3}
                 my={6}
                 h={500}
@@ -136,21 +140,25 @@ const Projects: React.FC = () => {
                   mx={5}
                   mt={5}
                 >
-                  <Box
+                  <MotionBox
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileHover={{ opacity: 1, scale: 1.2 }}
+                    transition={{ duration: 0.2 }}
                     minH={285}
                     pt={4}
-                    opacity={0}
-                    _hover={{
-                      opacity: 1,
-                      bgColor: BlackOpac,
-                    }}
+                    bgColor={BlackOpac}
+                    // opacity={0}
+                    // _hover={{
+                    //   opacity: 1,
+                    //   bgColor: BlackOpac,
+                    // }}
                     transitionDuration=".5s"
                     textAlign="center"
                     color={"white"}
                   >
                     {item.description}
                     <Box mt={4}>Tools used: {item.tools}</Box>
-                  </Box>
+                  </MotionBox>
                 </Box>
                 {item.link ? (
                   <Link href={item.link} target="_blank" _hover={{ textDecor: "none" }}>
@@ -196,7 +204,7 @@ const Projects: React.FC = () => {
                     </Button>
                   </Link>
                 ) : null}
-              </Box>
+              </MotionBox>
             </Box>
           )
         })}

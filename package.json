@@ -12,7 +12,6 @@
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@n8tb1t/use-scroll-position": "^2.0.3",
-    "dotenv": "^9.0.0",
     "framer-motion": "3.10.6",
     "next": "latest",
     "react": "^17.0.1",

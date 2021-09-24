@@ -1,17 +1,6 @@
-import { Box } from "@chakra-ui/react"
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import React from "react"
-import {
-  BlackOpac,
-  BlueGreen,
-  BrightYellow,
-  DeepBlack,
-  MainGreen,
-  MainPink,
-  Navy,
-  SolidGreen,
-  White,
-} from "../colorVars"
+import { BlackOpac, BlueGreen, BrightYellow, MainPink, SolidGreen } from "../colorVars"
 import { MotionBox, MotionText } from "./Motion/Motion"
 
 export interface LoaderProps {
