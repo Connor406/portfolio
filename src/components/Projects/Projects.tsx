@@ -49,23 +49,6 @@ const Projects: React.FC = () => {
       description:
         "This app uses the PokeAPI to query Pokemon data, allowing users to search for their favorite Pokemon",
     },
-    {
-      name: "Pint Hunter",
-      code: "https://github.com/Connor406/Pint-Hunter",
-      link: "https://pint-hunter.vercel.app/",
-      tools: "NextJS, React, TypeScript, Rest API, Chakra UI",
-      picSrc: "./pint.png",
-      description:
-        "Pint Hunter is a tool that lets users search for breweries by name, city, state, or zipcode",
-    },
-    {
-      name: "Reddit-ish",
-      code: "https://github.com/Connor406/Reddit-clone-backend",
-      picSrc: "./redditish.png",
-      description:
-        "A fullstack Reddit clone with custom authentication, allowing users to create, read, update, and delete posts as well as vote on other users' posts",
-      tools: "NextJS, React, GraphQL, Redis, PostgreSQL, Apollo, Chakra UI",
-    },
 
     // {
     //   name: "Dart Scoreboard",

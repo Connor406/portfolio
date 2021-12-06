@@ -153,7 +153,7 @@ export const Navbar: React.FC = ({}) => {
                     _hover={{
                       color: hoverColor[colorMode],
                     }}
-                    href="/Resume.pdf"
+                    href="/Connor-Mahan-Resume.pdf"
                     target="_blank"
                   >
                     Resume
