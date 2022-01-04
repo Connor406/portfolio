@@ -55,8 +55,7 @@ const About: React.FC = ({}) => {
           <br />
           <br />
           Thank you for taking the time to check out my portfolio. If you like what you see, please
-          feel free to reach out. I'm currently looking for new opportunities and would be happy to
-          connect!
+          feel free to reach out!
         </Text>
       </Box>
     </Wrapper>
