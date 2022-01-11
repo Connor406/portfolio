@@ -1,23 +1,22 @@
-import { Box, useColorMode } from "@chakra-ui/react";
-import React from "react";
-import { BlackOpac, DeepBlack, MainGreen } from "../colorVars";
-import { Navbar } from "./Navbar";
-import { Wrapper, WrapperVariant } from "./Wrapper";
+import * as Color from "@/colorVars"
+import { Box, useColorMode } from "@chakra-ui/react"
+import { Navbar } from "./Navbar"
+import { WrapperVariant } from "./Wrapper"
 
 interface LayoutProps {
-  variant?: WrapperVariant;
+  variant?: WrapperVariant
 }
 
 export const Layout: React.FC<LayoutProps> = ({ children, variant }) => {
-  const { colorMode } = useColorMode();
-  const bgColor = { light: MainGreen, dark: DeepBlack };
+  const { colorMode } = useColorMode()
+  const bgColor = { light: Color.MainBlue, dark: Color.DeepBlack }
 
   return (
-    <Box bgImage="url('/bgpic.jpg')" minH={640}>
+    <Box minH={640}>
       <Box w="100%" bg={bgColor[colorMode]} maxH={640}>
         <Navbar />
         {children}
       </Box>
     </Box>
-  );
-};
+  )
+}

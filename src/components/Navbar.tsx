@@ -1,13 +1,13 @@
+import Loader from "./Loader"
 import { HamburgerIcon } from "@chakra-ui/icons"
 import { Box, Flex, IconButton, Link, useColorMode } from "@chakra-ui/react"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { FaAngellist, FaGithub, FaLinkedin } from "react-icons/fa"
-import { BlackOpac, MainGreen } from "../colorVars"
-import { UseResponsiveCheck } from "../hooks/useResponsiveCheck"
+import { BlackOpac, MainGreen } from "@/colorVars"
+import { UseResponsiveCheck } from "@/hooks/useResponsiveCheck"
 import { DarkModeSwitch } from "./DarkModeSwitch"
-import Loader from "./Loader"
 import { MotionBox, MotionLink } from "./Motion/Motion"
 import { StyledDrawer } from "./StyledDrawer"
 
@@ -18,11 +18,11 @@ export const Navbar: React.FC = ({}) => {
   const [scrollY, setScrollY] = useState(0)
   const { isMobile } = UseResponsiveCheck()
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
-  useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1000)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => setIsLoading(false), 1000)
+  // }, [])
 
   useScrollPosition(({ currPos }) => {
     setScrollY(-currPos.y)
@@ -109,9 +109,9 @@ export const Navbar: React.FC = ({}) => {
                 isOpen={menuIsOpen}
                 menuItems={navbarLinks}
               />
-              <AnimatePresence>
+              {/* <AnimatePresence>
                 {isLoading && <Loader isMobile={isMobile} key="key" />}
-              </AnimatePresence>
+              </AnimatePresence> */}
             </>
           ) : (
             // Tablet & Desktop view
@@ -163,6 +163,7 @@ export const Navbar: React.FC = ({}) => {
                     {buttonIcons.map(icon => {
                       return (
                         <IconButton
+                          key={icon.aria}
                           as={Link}
                           aria-label={icon.aria}
                           variant="ghost"
@@ -181,9 +182,9 @@ export const Navbar: React.FC = ({}) => {
                   <DarkModeSwitch />
                 </Flex>
               </Flex>
-              <AnimatePresence>
+              {/* <AnimatePresence>
                 {isLoading && <Loader isMobile={isMobile} key="key" />}
-              </AnimatePresence>
+              </AnimatePresence> */}
             </>
           )}
         </MotionBox>

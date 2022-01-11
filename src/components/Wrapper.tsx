@@ -1,13 +1,12 @@
-import { Box, useColorMode } from "@chakra-ui/react";
-import React from "react";
-import { DeepBlack } from "../colorVars";
+import { Box, useColorMode } from "@chakra-ui/react"
+import { DeepBlack } from "@/colorVars"
 
-export type WrapperVariant = "small" | "regular";
+export type WrapperVariant = "small" | "regular"
 
 interface WrapperProps {
-  variant?: WrapperVariant;
-  bgTone?: { light: string; dark: string };
-  bgPic?: string;
+  variant?: WrapperVariant
+  bgTone?: { light: string; dark: string }
+  bgPic?: string
 }
 
 export const Wrapper: React.FC<WrapperProps> = ({
@@ -16,9 +15,9 @@ export const Wrapper: React.FC<WrapperProps> = ({
   bgTone,
   bgPic,
 }) => {
-  const { colorMode } = useColorMode();
-  const bgColor = { light: "white", dark: DeepBlack };
-  const color = { light: "black", dark: "white" };
+  const { colorMode } = useColorMode()
+  const bgColor = { light: "white", dark: DeepBlack }
+  const color = { light: "black", dark: "white" }
 
   return (
     <Box
@@ -38,5 +37,5 @@ export const Wrapper: React.FC<WrapperProps> = ({
         {children}{" "}
       </Box>
     </Box>
-  );
-};
+  )
+}
