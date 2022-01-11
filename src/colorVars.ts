@@ -1,5 +1,12 @@
 // BLUES //
 export const Navy = "#05386B"
+export const MainBlue = "rgba(103, 164, 171, 1)"
+export const Lavendar = "rgba(153, 155, 240, 1)"
+
+// ORANGES //
+export const MainOrange = "rgba(252, 179, 119, 1)"
+export const LightOrange = "rgba(255, 212, 176, 1)"
+export const MainYellow = "rgba(235, 224, 110, 1)"
 
 // GREENS //
 export const MainGreen = "rgba(22, 255, 189, 0.75)"
@@ -18,8 +25,6 @@ export const WhiteOpac = "rgba(237, 245, 225, 0.1)"
 // VIBRANT //
 export const BrightYellow = "#FAED26"
 export const MainPink = "rgba(213, 63, 140, 1)"
+export const SecondaryPink = "rgba(252, 139, 209, 1)"
 export const PinkOpac = "rgba(255, 255, 255, .5)"
 export const BrightPink = "#F070A1"
-
-// NOT IN USE => KEEP
-// export const CardGreen = "#12d69b";

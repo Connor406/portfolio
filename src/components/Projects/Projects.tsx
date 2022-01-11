@@ -94,7 +94,7 @@ const Projects: React.FC = () => {
       >
         {projects.map(item => {
           return (
-            <Box>
+            <Box key={item.name}>
               <MotionBox
                 transition={{ duration: 0.8, delay: 2 }}
                 initial={{ opacity: 0, scale: 0 }}
@@ -130,11 +130,6 @@ const Projects: React.FC = () => {
                     minH={285}
                     pt={4}
                     bgColor={BlackOpac}
-                    // opacity={0}
-                    // _hover={{
-                    //   opacity: 1,
-                    //   bgColor: BlackOpac,
-                    // }}
                     transitionDuration=".5s"
                     textAlign="center"
                     color={"white"}

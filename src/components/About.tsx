@@ -1,9 +1,7 @@
-import React from "react"
-import { Flex, useColorMode, Text, Heading, Box } from "@chakra-ui/react"
-import { Layout } from "./Layout"
+import { Box, Heading, Text } from "@chakra-ui/react"
+import { DeepBlack, MainGreen } from "../colorVars"
+import { UseResponsiveCheck } from "@/hooks/useResponsiveCheck"
 import { Wrapper } from "./Wrapper"
-import { UseResponsiveCheck } from "../hooks/useResponsiveCheck"
-import { BlackOpac, DeepBlack, MainGreen } from "../colorVars"
 
 const About: React.FC = ({}) => {
   const { isMobile, isTablet, isDesktop } = UseResponsiveCheck()

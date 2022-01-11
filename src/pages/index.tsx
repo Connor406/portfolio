@@ -1,14 +1,11 @@
 import { Box, useColorMode } from "@chakra-ui/react"
-import React, { useState } from "react"
-import { MainGreen } from "../colorVars"
-import About from "../components/About"
-import { ContactMe } from "../components/ContactMe"
-import HomePage from "../components/HomePage"
-import { Layout } from "../components/Layout"
-import Projects from "../components/Projects/Projects"
 import Head from "next/head"
-import { useEffect } from "react"
-import Loader from "../components/Loader"
+import { MainGreen } from "@/colorVars"
+import About from "@/components/About"
+import { ContactMe } from "@/components/ContactMe"
+import HomePage from "@/components/HomePage"
+import { Layout } from "@/components/Layout"
+import Projects from "@/components/Projects/Projects"
 
 const Index = () => {
   const { colorMode } = useColorMode()

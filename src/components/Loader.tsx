@@ -1,6 +1,5 @@
+import { BlackOpac, BlueGreen, BrightYellow, MainPink, SolidGreen } from "@/colorVars"
 import { motion } from "framer-motion"
-import React from "react"
-import { BlackOpac, BlueGreen, BrightYellow, MainPink, SolidGreen } from "../colorVars"
 import { MotionBox, MotionText } from "./Motion/Motion"
 
 export interface LoaderProps {

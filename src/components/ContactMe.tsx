@@ -1,11 +1,10 @@
-import { Box, Button, Divider, Flex, Link, Text, useColorMode } from "@chakra-ui/react"
-import React, { useEffect } from "react"
-import { IoLocationSharp } from "react-icons/io5"
+import { Box, Button, Link, Text, useColorMode } from "@chakra-ui/react"
 import { IoIosAirplane } from "react-icons/io"
+import { IoLocationSharp } from "react-icons/io5"
 import { MdEmail } from "react-icons/md"
-import { BlackOpac, BrightPink, BrightYellow, MainGreen } from "../colorVars"
+import { BlackOpac, BrightPink, BrightYellow, MainGreen } from "@/colorVars"
+import { UseResponsiveCheck } from "@/hooks/useResponsiveCheck"
 import { Wrapper } from "./Wrapper"
-import { UseResponsiveCheck } from "../hooks/useResponsiveCheck"
 
 export const ContactMe: React.FC = () => {
   const { colorMode } = useColorMode()

@@ -8,10 +8,8 @@ import {
   Link,
   useColorMode,
 } from "@chakra-ui/react"
-import React from "react"
-import { BlackOpac, CardGreen, GrayOpac, MainGreen, White } from "../colorVars"
+import { BlackOpac, White } from "@/colorVars"
 import { DarkModeSwitch } from "./DarkModeSwitch"
-import NextLink from "next/link"
 
 interface DrawerProps {
   onClose: any

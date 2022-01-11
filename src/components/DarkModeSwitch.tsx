@@ -1,11 +1,10 @@
-import { useColorMode, Switch, Box, Flex } from "@chakra-ui/react";
-import React from "react";
-import { UseResponsiveCheck } from "../hooks/useResponsiveCheck";
+import { Switch, useColorMode } from "@chakra-ui/react"
+import { UseResponsiveCheck } from "@/hooks/useResponsiveCheck"
 
 export const DarkModeSwitch = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const isDark = colorMode === "dark";
-  const { isMobile } = UseResponsiveCheck();
+  const { colorMode, toggleColorMode } = useColorMode()
+  const isDark = colorMode === "dark"
+  const { isMobile } = UseResponsiveCheck()
 
   return (
     <Switch
@@ -17,5 +16,5 @@ export const DarkModeSwitch = () => {
       onChange={toggleColorMode}
       colorScheme="green"
     />
-  );
-};
+  )
+}
