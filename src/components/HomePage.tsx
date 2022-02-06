@@ -1,7 +1,5 @@
-import { Box, ColorModeProvider, forwardRef, Heading, useColorMode } from "@chakra-ui/react"
-import { isValidMotionProp, motion } from "framer-motion"
-import React from "react"
-import { BrightPink, MainGreen, MainPink } from "../colorVars"
+import { Heading, useColorMode } from "@chakra-ui/react"
+import { MainGreen, MainPink } from "../colorVars"
 import { UseResponsiveCheck } from "../hooks/useResponsiveCheck"
 import { MotionBox, MotionHeading } from "./Motion/Motion"
 
