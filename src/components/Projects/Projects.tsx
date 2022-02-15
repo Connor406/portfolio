@@ -33,12 +33,11 @@ const Projects: React.FC = () => {
         "Agrograph uses satellite imagery and machine learning to predict crop yields and provide risk analysis for agricultural lenders",
     },
     {
-      name: "Lyric Keeper",
-      link: "https://www.lyrickeeper.com/",
-      picSrc: "/lklogo.jpg",
-      tools: "TypeScript, React, GraphQL, PostgreSQL, Apollo, Firebase",
-      description:
-        "A tool for musicians to create setlists, store song lyrics, and display scrolling lyrics for real-time performances",
+      name: "Dart Mule",
+      link: "https://beta.dartmule.com/",
+      picSrc: "/dart.png",
+      tools: "TypeScript, React, NextJS, PostgreSQL, Fastify, TurboRepo",
+      description: `Create private games with friends, keep score in real-time ⏱, track wins 🥇 and losses, and earn points for victories!`,
     },
     {
       name: "Pokedex",
@@ -50,16 +49,6 @@ const Projects: React.FC = () => {
         "This app uses the PokeAPI to query Pokemon data, allowing users to search for their favorite Pokemon",
     },
 
-    // {
-    //   name: "Dart Scoreboard",
-    //   code: "https://github.com/Connor406/Dart-score-keeper",
-    //   link: "",
-    //   picSrc: "/dart.png",
-    //   tools:
-    //     "Typescript, React Native, Styled Components, coming soon: GraphQL, PostgreSQL, Apollo ",
-    //   description:
-    //     "This React Native app allows users to create a game of 1 to 4 players with several different game variations and keeps track of the score. Working to add sign in and remote game play options for socially distanced dart gaming",
-    // },
     {
       name: "This website!",
       code: "https://github.com/Connor406/portfolio",

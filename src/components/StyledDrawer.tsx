@@ -75,7 +75,6 @@ export const StyledDrawer: React.FC<DrawerProps> = ({
                 <Link
                   key={key}
                   href={link.id}
-                  pointerEvents="none"
                   _hover={{
                     color: { color },
                   }}

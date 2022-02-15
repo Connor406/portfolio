@@ -1,8 +1,8 @@
-import { Heading, Image, useColorMode } from "@chakra-ui/react"
+import Lightning from "./Icons/Lightning"
 import * as Colors from "@/colorVars"
+import { Heading, useColorMode } from "@chakra-ui/react"
 import { UseResponsiveCheck } from "@/hooks/useResponsiveCheck"
 import { MotionBox, MotionHeading } from "./Motion/Motion"
-import Lightning from "./Icons/Lightning"
 
 const HomePage: React.FC = ({}) => {
   const { isMobile, isTablet, isDesktop } = UseResponsiveCheck()
