@@ -18,11 +18,6 @@ export const Navbar: React.FC = ({}) => {
   const [scrollY, setScrollY] = useState(0)
   const { isMobile } = UseResponsiveCheck()
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1000)
-  }, [])
 
   useScrollPosition(({ currPos }) => {
     setScrollY(-currPos.y)
@@ -109,9 +104,9 @@ export const Navbar: React.FC = ({}) => {
                 isOpen={menuIsOpen}
                 menuItems={navbarLinks}
               />
-              <AnimatePresence>
+              {/* <AnimatePresence>
                 {isLoading && <Loader isMobile={isMobile} key="key" />}
-              </AnimatePresence>
+              </AnimatePresence> */}
             </>
           ) : (
             // Tablet & Desktop view
@@ -181,9 +176,9 @@ export const Navbar: React.FC = ({}) => {
                   <DarkModeSwitch />
                 </Flex>
               </Flex>
-              <AnimatePresence>
+              {/* <AnimatePresence>
                 {isLoading && <Loader isMobile={isMobile} key="key" />}
-              </AnimatePresence>
+              </AnimatePresence> */}
             </>
           )}
         </MotionBox>

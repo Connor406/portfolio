@@ -20,7 +20,6 @@ const HomePage: React.FC = ({}) => {
         initial={{ x: 1000 }}
         transition={{
           duration: 1.2,
-          delay: isMobile ? 0.3 : 1.3,
           type: "spring",
         }}
       >
@@ -34,7 +33,6 @@ const HomePage: React.FC = ({}) => {
           animate={{ color: color[colorMode] }}
           transition={{
             duration: 1,
-            delay: isMobile ? 0.5 : 1.5,
           }}
         >
           Fun
@@ -46,7 +44,6 @@ const HomePage: React.FC = ({}) => {
         initial="initial"
         transition={{
           duration: 1,
-          delay: 1,
           type: "spring",
         }}
       >
@@ -65,7 +62,6 @@ const HomePage: React.FC = ({}) => {
         initial={{ x: 1000, y: 1000 }}
         transition={{
           duration: 1,
-          delay: isMobile ? 0.5 : 1.5,
           type: "spring",
         }}
       >
