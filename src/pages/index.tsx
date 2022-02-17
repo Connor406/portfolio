@@ -6,12 +6,17 @@ import { ContactMe } from "@/components/ContactMe"
 import HomePage from "@/components/HomePage"
 import { Layout } from "@/components/Layout"
 import Projects from "@/components/Projects/Projects"
+import { useEffect } from "react"
 
 const Index = () => {
   const { colorMode } = useColorMode()
   const bgColor = { light: MainGreen, dark: "gray.900" }
   const color = { light: "black", dark: MainGreen }
   const faviconColor = { light: "/favicon.png", dark: "/favicon-dark.png" }
+
+  useEffect(() => {
+    fetch(`https://api.dartmule.com/traffic?location=connorcodes`, { method: "get" })
+  }, [])
 
   return (
     <>
