@@ -1,18 +1,8 @@
 import { Box, Button, Flex, Link, useColorMode } from "@chakra-ui/react"
-import React from "react"
-import {
-  BlackOpac,
-  BlueGreen,
-  CardGreen,
-  GrayOpac,
-  LightGreen,
-  MainGreen,
-  PinkOpac,
-  White,
-  WhiteOpac,
-} from "../../colorVars"
-import { MotionBox } from "../Motion/Motion"
-import { Wrapper } from "../Wrapper"
+import { BlackOpac, CardGreen, LightGreen, PinkOpac, White, WhiteOpac } from "@/colorVars"
+import { MotionBox } from "@/components/Motion/Motion"
+import { Wrapper } from "@/components/Wrapper"
+import { projects } from "./projectData"
 
 const Projects: React.FC = () => {
   const { colorMode } = useColorMode()
@@ -22,43 +12,6 @@ const Projects: React.FC = () => {
   const projColor = { light: BlackOpac, dark: White }
   const test = { light: LightGreen, dark: "none" }
   const borderFlicker = { light: "0px", dark: "4px" }
-
-  let projects = [
-    {
-      name: "Agrograph",
-      link: "https://agrograph.com/",
-      picSrc: "/agrograph.png",
-      tools: "TypeScript, Node, React, Fastify, PostgreSQL",
-      description:
-        "Agrograph uses satellite imagery and machine learning to predict crop yields and provide risk analysis for agricultural lenders",
-    },
-    {
-      name: "Dart Mule",
-      link: "https://beta.dartmule.com/",
-      picSrc: "/dart.png",
-      tools: "TypeScript, React, NextJS, PostgreSQL, Fastify, TurboRepo",
-      description: `Create private games with friends, keep score in real-time ⏱, track wins 🥇 and losses, and earn points for victories!`,
-    },
-    {
-      name: "Pokedex",
-      link: "https://pokemon-pokedex-two.vercel.app/",
-      code: "https://github.com/Connor406/pokemon-pokedex",
-      picSrc: "/pokemon.png",
-      tools: "Nextjs, React, TypeScript, PokeAPI",
-      description:
-        "This app uses the PokeAPI to query Pokemon data, allowing users to search for their favorite Pokemon",
-    },
-
-    {
-      name: "This website!",
-      code: "https://github.com/Connor406/portfolio",
-      link: "https://connorcodes.com",
-      picSrc: "./website2.png",
-      description:
-        "The website you're currently looking at! Complete with Dark Mode, these projects, mobile responsiveness, and most importantly, my resume.",
-      tools: "NextJS, React, TypeScript, Chakra UI",
-    },
-  ]
 
   return (
     <Wrapper bgTone={{ light: PinkOpac, dark: BlackOpac }} bgPic="url('/bgplant.jpg')">
@@ -127,7 +80,7 @@ const Projects: React.FC = () => {
                     <Box mt={4}>Tools used: {item.tools}</Box>
                   </MotionBox>
                 </Box>
-                {item.link ? (
+                {item.link && (
                   <Link href={item.link} target="_blank" _hover={{ textDecor: "none" }}>
                     <Button
                       textAlign="center"
@@ -148,8 +101,8 @@ const Projects: React.FC = () => {
                       View App
                     </Button>
                   </Link>
-                ) : null}
-                {item.code ? (
+                )}
+                {item.code && (
                   <Link href={item.code} target="_blank" _hover={{ textDecor: "none" }}>
                     <Button
                       textAlign="center"
@@ -170,7 +123,7 @@ const Projects: React.FC = () => {
                       View Code
                     </Button>
                   </Link>
-                ) : null}
+                )}
               </MotionBox>
             </Box>
           )

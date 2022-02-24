@@ -1,13 +1,12 @@
 import { HamburgerIcon } from "@chakra-ui/icons"
 import { Box, Flex, IconButton, Link, useColorMode } from "@chakra-ui/react"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
-import React, { useEffect, useState } from "react"
+import { AnimateSharedLayout } from "framer-motion"
+import { useState } from "react"
 import { FaAngellist, FaGithub, FaLinkedin } from "react-icons/fa"
 import { BlackOpac, MainGreen } from "../colorVars"
 import { UseResponsiveCheck } from "../hooks/useResponsiveCheck"
 import { DarkModeSwitch } from "./DarkModeSwitch"
-import Loader from "./Loader"
 import { MotionBox, MotionLink } from "./Motion/Motion"
 import { StyledDrawer } from "./StyledDrawer"
 
@@ -155,10 +154,11 @@ export const Navbar: React.FC = ({}) => {
                   </Link>
 
                   <Box>
-                    {buttonIcons.map(icon => {
+                    {buttonIcons.map((icon, key) => {
                       return (
                         <IconButton
                           as={Link}
+                          key={key}
                           aria-label={icon.aria}
                           variant="ghost"
                           href={icon.href}

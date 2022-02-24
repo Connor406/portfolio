@@ -1,5 +1,5 @@
 import { Box, Heading, Text } from "@chakra-ui/react"
-import { DeepBlack, MainGreen } from "../colorVars"
+import { DeepBlack, MainGreen } from "@/colorVars"
 import { UseResponsiveCheck } from "@/hooks/useResponsiveCheck"
 import { Wrapper } from "./Wrapper"
 
